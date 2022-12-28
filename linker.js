@@ -1,4 +1,3 @@
-
 const { createClient } = require("@supabase/supabase-js");
 const csv = require("csvtojson");
 
@@ -7,7 +6,8 @@ const skey = process.env.SERVICE_ROLE;
 const supabase = createClient(url, skey);
 
 async function insertLinker() {
-  const jsonArray = await csv().fromFile("./data/matkul.csv");
+  const kelompokCSV = await csv().fromFile("./data/kelompok.csv");
+  const praktikanCSV = await csv().fromFile("./data/praktikan.csv");
 
   for (const data of jsonArray) {
     const { error } = await supabase
