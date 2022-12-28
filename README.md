@@ -9,6 +9,8 @@ create table
     isChanged boolean default false not null
   );
 
+-- Set up Row Level Security (RLS)
+-- See https://supabase.com/docs/guides/auth/row-level-security for more details.
 alter table
   profiles enable row level security;
 
@@ -34,6 +36,8 @@ create policy
 update
   using (auth.uid () = id);
 
+-- This trigger automatically creates a profile entry when a new user signs up via Supabase Auth.
+-- See https://supabase.com/docs/guides/auth/managing-user-data#using-triggers for more details.
 create function
   public.handle_new_user () returns trigger as $$
 begin
@@ -67,9 +71,9 @@ create table
   user_praktikum_linker (
     id uuid references profiles not null primary key,
     nrp text references profiles (nrp),
-    kelompok text,
+    kelompok text primary key,
     praktikum_role krole,
-    kode_praktikum text references praktikum,
+    kode_praktikum text references praktikum primary key,
     jadwal timestamp,
     minggu int4,
     nilai jsonb
