@@ -43,7 +43,6 @@ async function insertLinker() {
             .from("user_praktikum_linker")
             .insert({
               id: profile.id,
-              nrp: aslabs[i],
               kelompok: nama,
               praktikum_role: "aslab",
               kode_praktikum: data,
@@ -62,7 +61,6 @@ async function insertLinker() {
                 .from("user_praktikum_linker")
                 .insert({
                   id: profile.id,
-                  nrp: praktikan.nrp,
                   kelompok: nama,
                   praktikum_role: praktikan.role,
                   kode_praktikum: data,
