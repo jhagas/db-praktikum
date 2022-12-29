@@ -1,6 +1,6 @@
 const { createClient } = require("@supabase/supabase-js");
 const csv = require("csvtojson");
-require('dotenv').config();
+require("dotenv").config();
 const url = process.env.SUPABASE_URL;
 const skey = process.env.SERVICE_ROLE;
 
@@ -15,7 +15,11 @@ async function first() {
     const { error } = await supabase.auth.admin.createUser({
       email: data.nrp + "@praktikum.its.ac.id",
       password: data.nrp,
-      user_metadata: { full_name: data.nama, nrp: data.nrp },
+      user_metadata: {
+        full_name: data.nama,
+        nrp: data.nrp,
+        contact: data.contact,
+      },
       email_confirm: true,
     });
     console.log(error);

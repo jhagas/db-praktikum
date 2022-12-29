@@ -1,142 +1,78 @@
 ## Setup The Database (Supabase)
 
 ```sql
-create table
-  profiles (
+create table profiles (
     id uuid references auth.users on delete cascade not null primary key,
     nrp text unique,
     full_name text,
+    contact text,
     isChanged boolean default false not null
-  );
+);
 
--- Set up Row Level Security (RLS)
--- See https://supabase.com/docs/guides/auth/row-level-security for more details.
-alter table
-  profiles enable row level security;
+alter table profiles enable row level security;
+create policy "Profiles only viewable by logged in users" on profiles
+  for select to authenticated using (true);
+create policy "Users can update own profile." on profiles
+  for update using (auth.uid () = id);
 
-create policy
-  "Public profiles are viewable by everyone." on profiles for
-select
-  using (
-    auth.uid () IN (
-      SELECT
-        id
-      FROM
-        profiles
-    )
-  );
-
-create policy
-  "Users can insert their own profile." on profiles for insert
-with
-  check (auth.uid () = id);
-
-create policy
-  "Users can update own profile." on profiles for
-update
-  using (auth.uid () = id);
-
--- This trigger automatically creates a profile entry when a new user signs up via Supabase Auth.
--- See https://supabase.com/docs/guides/auth/managing-user-data#using-triggers for more details.
-create function
-  public.handle_new_user () returns trigger as $$
+create function public.handle_new_user()
+returns trigger as $$
 begin
-  insert into public.profiles (id, full_name, nrp)
-  values (new.id, new.raw_user_meta_data->>'full_name', new.raw_user_meta_data->>'nrp');
+  insert into public.profiles (id, full_name, nrp, contact)
+  values ( new.id, new.raw_user_meta_data->>'full_name', new.raw_user_meta_data->>'nrp', new.raw_user_meta_data->>'contact' );
   return new;
 end;
 $$ language plpgsql security definer;
 
-create trigger
-  on_auth_user_created
-after
-  insert on auth.users for each row
-execute
-  procedure public.handle_new_user ();
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute procedure public.handle_new_user();
 
-create table
-  matkul (id text unique primary key, modul_link text);
+CREATE TYPE krole AS ENUM('aslab', 'praktikan');
 
-create table
-  praktikum (
+create table matkul (
+  id text unique primary key,
+  modul_link text
+);
+create table praktikum (
     id text unique primary key,
     matkul text references matkul,
     judul text
-  );
-
-CREATE TYPE
-  krole AS ENUM('aslab', 'praktikan');
-
-create table
-  user_praktikum_linker (
-    id uuid references profiles not null primary key,
-    nrp text references profiles (nrp),
-    kelompok text primary key,
+);
+create table user_praktikum_linker (
+    id uuid references profiles not null,
+    kelompok text,
+    kode_praktikum text references praktikum,
     praktikum_role krole,
-    kode_praktikum text references praktikum primary key,
     jadwal timestamp,
-    minggu int4,
-    nilai jsonb
-  );
+    minggu int2,
+    nilai jsonb,
+    PRIMARY KEY (id, kelompok, kode_praktikum)
+);
 
-alter table
-  matkul enable row level security;
-create policy
-  "matkul only can be viewed by logged in users" on matkul for
-select
-  using (
-    auth.uid () in (
-      select
-        id
-      from
-        profiles
-    )
-  );
+alter table matkul enable row level security;
+create policy "matkul only can be viewed by logged in users" on matkul
+  for select to authenticated using (true);
 
-alter table
-  praktikum enable row level security;
-create policy
-  "praktikum only can be viewed by logged in users" on praktikum for
-select
-  using (
-    auth.uid () in (
-      select
-        id
-      from
-        profiles
-    )
-  );
+alter table praktikum enable row level security;
+create policy "praktikum only can be viewed by logged in users" on praktikum
+  for select to authenticated using (true);
 
-alter table
-  user_praktikum_linker enable row level security;
-create policy
-  "User Information viewable by themself and aslab role." on user_praktikum_linker for
-select
-  using (
-    auth.uid () in (
-      select
-        id
-      from
-        profiles
-    )
-  );
-
-create policy
-  "Only aslab can update information." on user_praktikum_linker for
-update
-  using (
-    praktikum_role = 'aslab'
-  );
+alter table user_praktikum_linker enable row level security;
+create policy "User Information viewable by logged in users" on user_praktikum_linker
+  for select to authenticated using (true);
+create policy "Only aslab can update information." on user_praktikum_linker
+  for update using ( praktikum_role = 'aslab');
 ```
 
-## Reset The Database (Run one-by-one and comment everything else)
+## Destroy/reset database
 
 ```sql
-drop trigger if exists on_auth_user_created on auth.users;
+drop table if exists matkul, praktikum, kelompok, user_praktikum_linker;
+
 drop function if exists handle_new_user;
 drop table if exists profiles;
 
-drop table if exists matkul, praktikum, kelompok, user_praktikum_linker;
 drop type krole;
 ```
 
