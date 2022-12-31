@@ -59,10 +59,32 @@ create policy "praktikum only can be viewed by logged in users" on praktikum
   for select to authenticated using (true);
 
 alter table user_praktikum_linker enable row level security;
-create policy "User Information viewable by logged in users" on user_praktikum_linker
-  for select to authenticated using (true);
-create policy "Only aslab can update information." on user_praktikum_linker
-  for update using ( praktikum_role = 'aslab');
+
+create or replace function linker_update()
+returns setof text
+language sql
+security definer
+set search_path = public
+stable
+as $$
+    select kelompok
+    from user_praktikum_linker
+    where id = auth.uid() and praktikum_role = 'aslab'
+$$;
+
+create policy "Aslab can update the kelompok he's on"
+  on user_praktikum_linker
+  for all using (
+    kelompok in (
+      select linker_update()
+    )
+  );
+
+create policy "Praktikan only select themself and aslab"
+  on user_praktikum_linker
+  for select using (
+    auth.uid() = id or 'aslab' = praktikum_role
+  );
 ```
 
 ## Destroy/reset database
