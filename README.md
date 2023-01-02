@@ -85,6 +85,17 @@ create policy "Praktikan only select themself and aslab"
   for select using (
     auth.uid() = id or 'aslab' = praktikum_role
   );
+
+create or replace function dup_jadwal()
+returns setof timestamp
+language sql
+as $$
+    select jadwal
+    from user_praktikum_linker
+    where praktikum_role = 'aslab'
+    GROUP BY jadwal
+    HAVING COUNT(*) >= 3;
+$$;
 ```
 
 ## Destroy/reset database
