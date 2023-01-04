@@ -103,7 +103,7 @@ $$;
 ```sql
 drop table if exists matkul, praktikum, kelompok, user_praktikum_linker;
 
-drop function if exists handle_new_user;
+drop function if exists handle_new_user, linker_update, dup_jadwal;
 drop table if exists profiles;
 
 drop type krole;
