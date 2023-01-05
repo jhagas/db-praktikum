@@ -6,6 +6,7 @@ create table profiles (
     nrp text unique,
     full_name text,
     contact text,
+    avatar_url text,
     isChanged boolean default false not null
 );
 
@@ -96,6 +97,18 @@ as $$
     GROUP BY jadwal
     HAVING COUNT(*) >= 3;
 $$;
+
+-- Set up Storage!
+insert into storage.buckets (id, name)
+  values ('avatars', 'avatars');
+
+-- Set up access controls for storage.
+-- See https://supabase.com/docs/guides/storage#policy-examples for more details.
+create policy "Avatar images are accessible to logged in users." on storage.objects
+  for select to authenticated using (bucket_id = 'avatars');
+
+create policy "Anyone can upload an avatar." on storage.objects
+  for insert to authenticated with check (bucket_id = 'avatars');
 ```
 
 ## Destroy/reset database
@@ -120,3 +133,4 @@ drop type krole;
    ```
 4. Run `node first.js`
 5. Run `node linker.js`
+6. Want to delete all data you already registered? Run `node resetAll.js`
