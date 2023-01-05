@@ -105,10 +105,7 @@ insert into storage.buckets (id, name)
 -- Set up access controls for storage.
 -- See https://supabase.com/docs/guides/storage#policy-examples for more details.
 create policy "Avatar images are accessible to logged in users." on storage.objects
-  for select to authenticated using (bucket_id = 'avatars');
-
-create policy "Anyone can upload an avatar." on storage.objects
-  for insert to authenticated with check (bucket_id = 'avatars');
+  for all to authenticated using (bucket_id = 'avatars');
 ```
 
 ## Destroy/reset database
