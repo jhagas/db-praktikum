@@ -122,6 +122,8 @@ drop type krole;
 ## Quick How-to
 
 1. Make all the csv file required like in `./data` folder in Google Sheet or anywhere else, then download it and rename exactly like this example.
+   - One praktikum group only have ONE aslab in one Judul Praktikum
+   - Aslab must have contact number
 2. Run `npm install`, make sure Node.js is installed on your system.
 3. Create `.env` file that contains
    ```
