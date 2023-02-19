@@ -1,9 +1,143 @@
 kelompok,nrp,nama,role,matkul
-INST-01,0000003,Cahyo Maulana,praktikan,instrumentasi
-INST-01,0000004,Dimas Fajri,praktikan,instrumentasi
-INST-01,0000005,Emmanuel Purnama,praktikan,instrumentasi
-INST-01,0000006,Fajar Ilham,praktikan,instrumentasi
-INST-02,0000007,Ginanjar Wahyu,praktikan,instrumentasi
-INST-02,0000008,Hamdan Rizky,praktikan,instrumentasi
-INST-02,0000009,Ilyas Khoiruddin,praktikan,instrumentasi
-INST-02,0000010,Janumurti Nur Azizah,praktikan,instrumentasi
+INST-01,5001211003,Myra Rizky Ardelia,praktikan,instrumentasi
+INST-01,5001211006,Pranata Nuari Adi,praktikan,instrumentasi
+INST-01,5001211008,Endang Nur Hanifah,praktikan,instrumentasi
+INST-01,5001211011,Feti Febriani Sari,praktikan,instrumentasi
+INST-01,5001211014,Rika Jaya Kusuma Wardani,praktikan,instrumentasi
+INST-01,5001211017,Fairuz Nur `Aabidah,praktikan,instrumentasi
+INST-01,5001211018,Mohammad Fazril Haqim,praktikan,instrumentasi
+INST-01,5001211020,Devina Mayda Arista Cahyani,praktikan,instrumentasi
+INST-01,5001211023,Muhammad Alid Rizky Ma'aly,praktikan,instrumentasi
+INST-01,5001211026,Izzudin Ali Yafi,praktikan,instrumentasi
+INST-02,5001211029,Usqi' Syakhaka Billah,praktikan,instrumentasi
+INST-02,5001211035,Mira Shelvia Putri Gusedy,praktikan,instrumentasi
+INST-02,5001211039,Adila Dimas Rahmah Ayu,praktikan,instrumentasi
+INST-02,5001211042,Siska Yulinda Chesara,praktikan,instrumentasi
+INST-02,5001211046,Musthofa Al-jawi,praktikan,instrumentasi
+INST-02,5001211049,Tegar Wicaksono,praktikan,instrumentasi
+INST-02,5001211053,Muhammad Hudan Firdaus,praktikan,instrumentasi
+INST-02,5001211056,Hanifah Saniyyah Salsabila,praktikan,instrumentasi
+INST-02,5001211061,Virga Ajitiya,praktikan,instrumentasi
+INST-02,5001211066,Michael Muhammad Rasyad,praktikan,instrumentasi
+INST-03,5001211069,Diah Ayu Alfianti,praktikan,instrumentasi
+INST-03,5001211072,Nico Firman Saputra,praktikan,instrumentasi
+INST-03,5001211076,Putri Nur Lailiana Safitri,praktikan,instrumentasi
+INST-03,5001211079,Maichal Bushido Alinan,praktikan,instrumentasi
+INST-03,5001211083,Silvia Dwi Anggraini,praktikan,instrumentasi
+INST-03,5001211086,Mahara Syakira Wirawati Suhardarma,praktikan,instrumentasi
+INST-03,5001211091,Cindy Firda Prameswara,praktikan,instrumentasi
+INST-03,5001211094,Audy Vanessa Aprilia,praktikan,instrumentasi
+INST-03,5001211097,Adinda Nur Izzati Amil,praktikan,instrumentasi
+INST-03,5001211100,Intania Citra Indasari,praktikan,instrumentasi
+INST-04,5001211103,Maulidia Widyastuti,praktikan,instrumentasi
+INST-04,5001211106,Salma Riany Nurazizah,praktikan,instrumentasi
+INST-04,5001211110,Khofifah Izzatur Rohmah,praktikan,instrumentasi
+INST-04,5001211115,Layla Bulan Ramadhani Achmad,praktikan,instrumentasi
+INST-04,5001211119,Nathan Ramadhani Alfiansyah,praktikan,instrumentasi
+INST-04,5001211122,Dila Kurnia Samsudin,praktikan,instrumentasi
+INST-04,5001211126,Nesya Azzahra Rianti,praktikan,instrumentasi
+INST-04,5001211130,Devi Qothrunnada Daroini,praktikan,instrumentasi
+INST-04,5001211133,Jona Maruli Maleakhi Sitorus,praktikan,instrumentasi
+INST-05,5001211136,Kinanta Rahma Amalia,praktikan,instrumentasi
+INST-05,5001211140,Arkan Fatih Asadulhaq,praktikan,instrumentasi
+INST-05,5001211144,Anissa Avickry Shalihah,praktikan,instrumentasi
+INST-05,5001211147,Sintyawati Putri Ardhi,praktikan,instrumentasi
+INST-05,5001211150,Safirah Hermaika Putri,praktikan,instrumentasi
+INST-05,5001211153,Adinda Mutiara Widyaputri,praktikan,instrumentasi
+INST-05,5001211156,Rizal Surya Achadiyat,praktikan,instrumentasi
+INST-05,5001211160,Muhammad Naufaldi,praktikan,instrumentasi
+INST-05,5001211163,Fatimatu Zuhro,praktikan,instrumentasi
+INST-06,5001211002,Johannes Vanreen M,praktikan,instrumentasi
+INST-06,5001211005,Aisya Dyah Habsari,praktikan,instrumentasi
+INST-06,5001211009,Wahyu Satria Nusantara,praktikan,instrumentasi
+INST-06,5001211012,A.Muhammad Asrul Eka Saputra,praktikan,instrumentasi
+INST-06,5001211015,Aryasena Pinandito,praktikan,instrumentasi
+INST-06,5001211021,Febrina Marito Lumban Gaol,praktikan,instrumentasi
+INST-06,5001211024,Afifah Nuraini Putri Purnama,praktikan,instrumentasi
+INST-06,5001211027,Fahdia Safitri Hidayat,praktikan,instrumentasi
+INST-06,5001211030,Muhammad Firdaus,praktikan,instrumentasi
+INST-06,5001211036,Arif Rahmat Hakim,praktikan,instrumentasi
+INST-07,5001211040,Kiki Eka Dwintasari,praktikan,instrumentasi
+INST-07,5001211043,Navita Fatwatul Ulumiyah,praktikan,instrumentasi
+INST-07,5001211047,Rizal Bachtiar,praktikan,instrumentasi
+INST-07,5001211050,Adhelia Benny Nugraha,praktikan,instrumentasi
+INST-07,5001211054,Sabina Nova Rahmawati,praktikan,instrumentasi
+INST-07,5001211058,Clauretta Risma Briliyana,praktikan,instrumentasi
+INST-07,5001211062,Muhammad Fauzan Ariyatmoko,praktikan,instrumentasi
+INST-07,5001211067,Nabiha Putri Deswanti,praktikan,instrumentasi
+INST-07,5001211070,Arlyne Tama Dewi Suncoko,praktikan,instrumentasi
+INST-08,5001211073,Nurul Fatonah,praktikan,instrumentasi
+INST-08,5001211077,Ahmad Sodik Zainuddin,praktikan,instrumentasi
+INST-08,5001211080,Reza Arifin Sori Harahap,praktikan,instrumentasi
+INST-08,5001211084,Harpa Agra Titah Sayyidina Asy Syams,praktikan,instrumentasi
+INST-08,5001211087,Michael Ars Davin Bashori,praktikan,instrumentasi
+INST-08,5001211092,Yuliana,praktikan,instrumentasi
+INST-08,5001211095,Titi Nurhaliza Niken Ayu B.,praktikan,instrumentasi
+INST-08,5001211098,Prayogi Abim Aryansyah,praktikan,instrumentasi
+INST-08,5001211101,Dewi Sugiarti,praktikan,instrumentasi
+INST-09,5001211104,Ayatullah Marhamah Firizqillah,praktikan,instrumentasi
+INST-09,5001211108,Ersha Fitriana Nur Azizah,praktikan,instrumentasi
+INST-09,5001211112,Claudia Farika Lina Salsabila,praktikan,instrumentasi
+INST-09,5001211117,Hamzah Rahman Sukarno,praktikan,instrumentasi
+INST-09,5001211120,Muhammad Naufal Rizqi Putra,praktikan,instrumentasi
+INST-09,5001211123,Ammara Putri Marsyanda,praktikan,instrumentasi
+INST-09,5001211127,Nieke Eka Rachmawatie,praktikan,instrumentasi
+INST-09,5001211131,Wilda Meylina Permatasari,praktikan,instrumentasi
+INST-09,5001211134,Mazaya Anantya Naulita,praktikan,instrumentasi
+INST-10,5001211137,Dzaky Julian Al Hakim,praktikan,instrumentasi
+INST-10,5001211142,Dhiva Hikari Putri,praktikan,instrumentasi
+INST-10,5001211145,Puput Indira Larasati,praktikan,instrumentasi
+INST-10,5001211148,Putri Alfina Damayanti,praktikan,instrumentasi
+INST-10,5001211151,Zanetta Rachel Almiranda Lesar,praktikan,instrumentasi
+INST-10,5001211154,Adhistana Maharani,praktikan,instrumentasi
+INST-10,5001211157,Faris Naufal Hakim,praktikan,instrumentasi
+INST-10,5001211161,Dewi Wanda Anjani,praktikan,instrumentasi
+INST-10,5001211164,Ummu Qudsiyah,praktikan,instrumentasi
+INST-11,5001211001,Nabil Arsy Muhamad Kamaludin,praktikan,instrumentasi
+INST-11,5001211004,Rara Aprilia Syahrani,praktikan,instrumentasi
+INST-11,5001211007,Hanandaru Mahaputra Purwanto,praktikan,instrumentasi
+INST-11,5001211010,Arsy Fitrah Ramadhan,praktikan,instrumentasi
+INST-11,5001211013,Darojatul Aliyah,praktikan,instrumentasi
+INST-11,5001211016,Akh. Zaki Roihan,praktikan,instrumentasi
+INST-11,5001211019,Andjani Najaa Sanjaya,praktikan,instrumentasi
+INST-11,5001211022,Syaikha Syafira Atharina,praktikan,instrumentasi
+INST-11,5001211025,Aksa Oktaviani Agustin,praktikan,instrumentasi
+INST-11,5001211028,Anindiya Syalwa Shefira,praktikan,instrumentasi
+INST-12,5001211033,Kholidina Maghfiroh,praktikan,instrumentasi
+INST-12,5001211038,Maharani Wahyuning Tyas,praktikan,instrumentasi
+INST-12,5001211041,Aprilia Dela Safitri,praktikan,instrumentasi
+INST-12,5001211045,Vina Felicia Hasian Br L. Tobing,praktikan,instrumentasi
+INST-12,5001211048,Jaufatul Adelia Izzati,praktikan,instrumentasi
+INST-12,5001211051,Nisrina Anindya,praktikan,instrumentasi
+INST-12,5001211055,Dzikri Fatan Elbani,praktikan,instrumentasi
+INST-12,5001211059,Nur Anisa Oktafia,praktikan,instrumentasi
+INST-12,5001211063,Vivi Andy Maulida,praktikan,instrumentasi
+INST-12,5001211068,Antonius Wijaya,praktikan,instrumentasi
+INST-13,5001211071,Putri Ayu Kumalahadi,praktikan,instrumentasi
+INST-13,5001211074,Mohammad Arsyi Ramadhon,praktikan,instrumentasi
+INST-13,5001211078,Ahmad Andi Reza,praktikan,instrumentasi
+INST-13,5001211082,Moh. Miftahul Khoir,praktikan,instrumentasi
+INST-13,5001211085,Nabila Putri Ariyani,praktikan,instrumentasi
+INST-13,5001211088,Risky Lucky Romadhon,praktikan,instrumentasi
+INST-13,5001211093,Marvel Demateo Mardat,praktikan,instrumentasi
+INST-13,5001211096,Siska Ariani Pupriandari,praktikan,instrumentasi
+INST-13,5001211099,Amaliah Rahmah,praktikan,instrumentasi
+INST-14,5001211102,Pingky Kartika Asmarani,praktikan,instrumentasi
+INST-14,5001211105,Veronica Queenta Febby Marshella,praktikan,instrumentasi
+INST-14,5001211109,Annisa Budhi Prihutami,praktikan,instrumentasi
+INST-14,5001211113,Shafwa Amada Amelia,praktikan,instrumentasi
+INST-14,5001211118,Marina Hidayati,praktikan,instrumentasi
+INST-14,5001211121,Reina Sabrina Khairani,praktikan,instrumentasi
+INST-14,5001211124,Ach. Munzil Adhim,praktikan,instrumentasi
+INST-14,5001211128,Shafira Hasya Anandita,praktikan,instrumentasi
+INST-14,5001211132,Brilliana Oktavioni Kahfi,praktikan,instrumentasi
+INST-15,5001211135,Amanda Nur Ramadhani,praktikan,instrumentasi
+INST-15,5001211139,Ardhita Febrianti,praktikan,instrumentasi
+INST-15,5001211143,Oktaviani Dwi Rahma Yunita,praktikan,instrumentasi
+INST-15,5001211146,Yufi Rizky Amalia,praktikan,instrumentasi
+INST-15,5001211149,Novita Anggraeni,praktikan,instrumentasi
+INST-15,5001211152,Moch. Dimas Ramadhana,praktikan,instrumentasi
+INST-15,5001211155,Sutan Herlambang Firmansyah,praktikan,instrumentasi
+INST-15,5001211158,Ja'far Asidiqi,praktikan,instrumentasi
+INST-15,5001211162,Tri Tamimah Mulya Fatinah,praktikan,instrumentasi
+INST-15,5001211166,Nugraha Ramadhan,praktikan,instrumentasi

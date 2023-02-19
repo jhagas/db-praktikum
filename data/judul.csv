@@ -1,3 +1,7 @@
 kode,matkul,judul
-I1,instrumentasi,Testing 1
-I2,instrumentasi,Testing 2
+I1,instrumentasi,Sensor
+I2,instrumentasi,Penguat Sinyal
+I3,instrumentasi,Rangkaian Filter Aktif
+I4,instrumentasi,Gerbang Logika dan Aljabar Boolean
+I5,instrumentasi,Flip-flop
+I6,instrumentasi,Multivibrator
