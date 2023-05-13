@@ -18,4 +18,4 @@ async function resetUser(nrp) {
   console.log(user, error)
 }
 
-resetUser(5001211025);
+resetUser(5001211158);
